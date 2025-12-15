@@ -35,10 +35,18 @@ Run this on the server acting as the gateway:
 - Enter **Master IP** and **Slave IPs**.
 - It will install ProxySQL and configure Read/Write splitting automatically.
 
-## Firewall Tips
-If using `ufw`:
+### 4. Dashboard (Monitoring)
+Run this on any server (can be same as ProxySQL):
 ```bash
-ufw allow 3306/tcp  # On DB Servers
-ufw allow 6033/tcp  # On ProxySQL Server
-ufw allow 6032/tcp  # On ProxySQL Server (Admin)
+./install_dashboard.sh
 ```
+- It will install Python and Flask.
+- It will aks for **All Node IPs** to configure connectivity.
+- Access via browser: `http://<SERVER_IP>:5000`
+
+## Firewall Tips
+If using `ufw` or other firewalls, allow these ports:
+- **3306**: Database (Master/Slaves)
+- **6033**: ProxySQL (SQL Traffic)
+- **6032**: ProxySQL (Admin)
+- **5000**: Dashboard Web UI
