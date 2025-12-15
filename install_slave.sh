@@ -101,3 +101,4 @@ echo -e "${GREEN}[4/4] Verification...${NC}"
 mariadb -e "SHOW SLAVE STATUS\G"
 
 echo "Slave Setup Complete!"
+echo -e "${YELLOW}NOTE: Please allow incoming connections on Port 3306 in your firewall/security group.${NC}"

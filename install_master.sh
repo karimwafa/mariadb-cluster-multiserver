@@ -105,10 +105,4 @@ mariadb -e "FLUSH PRIVILEGES;"
 
 echo -e "${GREEN}[5/5] Setup Complete!${NC}"
 echo "Master is running on Port 3306."
-if [[ "$OS" == "ubuntu" || "$OS" == "debian" ]]; then
-    echo "Allow port 3306 in ufw: 'ufw allow 3306'"
-else
-    echo "Allow port 3306 in firewall-cmd:"
-    echo "  firewall-cmd --permanent --add-port=3306/tcp"
-    echo "  firewall-cmd --reload"
-fi
+echo -e "${YELLOW}NOTE: Please allow incoming connections on Port 3306 in your firewall/security group.${NC}"
