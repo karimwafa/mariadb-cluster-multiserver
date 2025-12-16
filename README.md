@@ -4,7 +4,7 @@ This folder contains scripts to install the cluster components directly on **Ubu
 
 ## Prerequisites
 - **Root Access**: You must run scripts as `root`.
-- **Operating System**: Ubuntu 20.04/22.04 LTS or Debian 11/12.
+- **Operating System**: Ubuntu 20.04/22.04 LTS, Debian 11/12, RHEL 8/9, CentOS Stream 8/9, AlmaLinux 8/9.
 - **Network**: All servers must be able to ping each other. Open Ports 3306, 6032, 6033.
 
 ## Installation Steps
